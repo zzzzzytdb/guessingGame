@@ -70,7 +70,7 @@ public class Guesser{
     Scanner scanner = new Scanner(System.in);
 
     while (true){
-      reply = scanner.nextLine();
+      reply = scanner.nextLine().toUpperCase();
 
       if (reply.equals("T") || reply.equals("F"))  {
         return  reply;
@@ -114,5 +114,4 @@ public class Guesser{
                        " (took me " + numberOfGuesses +
                        " guesses)");
   }
-
 }
