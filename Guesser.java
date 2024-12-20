@@ -1,4 +1,5 @@
 import java.io.Console;
+import java.util.Scanner;
 
 /**
  * Assignment 1 - Guessing Game
@@ -24,6 +25,10 @@ public class Guesser{
   
   // Write the constructor below this line.
 
+  public Guesser(int low, int high){
+    this.low = low;
+    this.high = high;
+  }
 
   /*
    * Task 2. Complete the start() method, so that
@@ -32,7 +37,9 @@ public class Guesser{
    */
   public void start(){
     // call the rules method here
+    rules();
     // call the doGuesses() method here
+    doGuesses();
   }
 
   private void rules(){
@@ -59,7 +66,19 @@ public class Guesser{
     // As long as it is not a valid reply (one of "T" and "F")
     // write an error message, and read a new reply.
     // When you have gotten a valid reply, return it.
-    return reply;
+
+    Scanner scanner = new Scanner(System.in);
+
+    while (true){
+      reply = scanner.nextLine();
+
+      if (reply.equals("T") || reply.equals("F"))  {
+        return  reply;
+      }
+      else {
+        System.out.println("Not valid reply");
+      }
+    }
   }
 
   private void doGuesses(){
