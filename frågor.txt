@@ -1,0 +1,27 @@
+Vad är pull repektive push?
+Pull innebär att man hämtar filer från sitt git moln till den lokala datorn.
+Push innbär att du laddar upp filer till sitt git moln.
+
+När använder man log respektive status?
+log används för att se senaste förändringar till sin git. det är också viktigt att dokumentera, så att man kan se och läsa förändringarna.
+status används för att se vilka förändringar man har förberett i sitt lokala repo innan man commit:ar de upp till git repot.
+
+Vad är en Git branch och varför är de viktiga?
+Git branch används för att ha olika versioner av arbetet eller delar av arbetet. som man, eller flera personer kan jobba på samtidigt.
+genom att arbeta på en viss branch så undviker man att kod krockar med varandras arbeten. 
+
+Det finns flera sätt att rulla tillbaka koden till ett tidigare tillstånd. 
+Förklara skillnaden och motivera när man skulle använda den ena eller andra metoden.
+Ge exempel på de kommandon du använder för att göra detta och vissa att det fungerar, vilken output du fick från git-kommandona.
+Tips: Gör exemplen med att backa i en branch så att master fortfarande är korrekt.
+
+
+git restore
+för att förflytta dig till en viss commit eller återställa en viss fil.
+HEAD flyttas till den committen. Återställer till en tidigare commit
+
+git reset
+flyttar HEAD, till din en viss commit. commit historiken påverkas. används för att ångra commits
+
+git revert
+skapar en ny commit som ångrar en tidigare commit. Tidigare historik kommer inte påverkas. Ångrar förändringar
